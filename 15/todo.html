@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>To-Do List</h1>
+      <input type="text" id="taskinput" placeholder="Add new task..." />
+      <select id="priority">
+        <option value="Low">Low</option>
+        <option value="Medium">Medium</option>
+        <option value="High">High</option>
+      </select>
+      <input type="date" id="date" placeholder="Date..." />
+      <button onclick="addTask()">Add Task</button>
+      <div>
+        <button onclick="sortbypr()">Sort by priority</button>
+        <button onclick="sortbydate()">Sort by date</button>
+      </div>
+    </div>
+
+    <main class="mainb">
+      <div class="alltask">
+        <h1>Pending</h1>
+
+        <div id="tasklist"></div>
+      </div>
+      <div id="completed">
+        <h1>Completed</h1>
+      </div>
+    </main>
+
+    <script src="todo.js"></script>
+  </body>
+</html>

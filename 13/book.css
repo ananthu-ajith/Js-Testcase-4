@@ -1,0 +1,113 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.searchbr {
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 20px; 
+}
+
+
+#searchBook {
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+}
+
+#searchbtn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+#searchbtn:hover {
+    background-color: #0056b3;
+}
+
+
+#mainbk {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+section {
+
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+
+
+#newBookName,
+#newBookAuthor,
+#newBookPrice,
+#addBookBtn {
+    margin-bottom: 10px; 
+}
+
+#addBookBtn {
+    padding: 5px 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+}
+
+#addBookBtn:hover {
+    background-color: #0056b3;
+}
+
+
+h2
+{
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 22px;
+}
+
+h3
+{
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(90, 89, 89);
+    font-weight: 550;
+}
+
+h4
+{
+    
+    font-size: 18px;
+    font-weight: 550;
+
+}
+
+.addbk
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.addbk>input
+{
+    height: 30px;
+    width: 300px;
+}
+
+.addbk>button
+{
+    height: 30px;
+    width: 100px;
+}
