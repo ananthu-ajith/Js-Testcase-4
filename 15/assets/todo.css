@@ -99,7 +99,9 @@ span {
   scrollbar-width: none;
 }
 
-#completed {
+
+.completedmain
+{
   width: 30%;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -110,6 +112,12 @@ span {
   height: 50vh;
   overflow-y: scroll;
   scrollbar-width: none;
+}
+
+#completed {
+
+  padding: 0;
+  margin: 0;
 }
 
 #completed section {

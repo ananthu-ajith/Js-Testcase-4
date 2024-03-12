@@ -41,21 +41,22 @@ function markitem(index) {
   let completed = document.getElementById("completed");
   console.log(index);
   let existtask = JSON.parse(localStorage.getItem("data")) || [];
+
+  let allcompletedtasks = JSON.parse(localStorage.getItem("completed")) || [];
+
+
   let completedtask = existtask[index];
-  console.log(completedtask);
+
+  allcompletedtasks.push(completedtask);
+
+ 
   existtask.splice(index, 1);
   localStorage.setItem("data", JSON.stringify(existtask));
-  localStorage.setItem("completed", JSON.stringify(existtask));
+  localStorage.setItem("completed", JSON.stringify(allcompletedtasks));
 
   displayTasks(existtask);
+  displaycompleted(allcompletedtasks);
 
-  let newtask = `
-            <section>
-                <span>${completedtask.name}</span>
-                <span>${completedtask.priority}</span>
-                <span>${completedtask.date}</span>
-            </section>`;
-  completed.innerHTML += newtask;
 }
 
 function displayTasks(tasks) {
@@ -74,6 +75,25 @@ function displayTasks(tasks) {
     tasklist.innerHTML += newtask;
   });
 }
+
+
+function displaycompleted(tasks) {
+
+  let completed = document.getElementById("completed");
+  completed.innerHTML = "";
+
+  tasks.forEach((allcompletedtasks, index) => {
+    let newtask = `
+            <section>
+                <span>${allcompletedtasks.name}</span>
+                <span>${allcompletedtasks.priority}</span>
+                <span>${allcompletedtasks.date}</span>
+            </section>`;
+            completed.innerHTML += newtask;
+  });
+
+}
+
 
 function sortbypr() {
   let existtask = JSON.parse(localStorage.getItem("data")) || [];
@@ -96,3 +116,7 @@ function sortbydate() {
 
   displayTasks(existtask);
 }
+
+
+displaycompleted(JSON.parse(localStorage.getItem("completed")));
+displayTasks(JSON.parse(localStorage.getItem("data")));
