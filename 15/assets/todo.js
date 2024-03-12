@@ -60,6 +60,9 @@ function markitem(index) {
 }
 
 function displayTasks(tasks) {
+
+  if(tasks)
+  {
   let tasklist = document.getElementById("tasklist");
   tasklist.innerHTML = "";
 
@@ -74,11 +77,15 @@ function displayTasks(tasks) {
             </section>`;
     tasklist.innerHTML += newtask;
   });
+
+}
 }
 
 
 function displaycompleted(tasks) {
 
+  if(tasks)
+{
   let completed = document.getElementById("completed");
   completed.innerHTML = "";
 
@@ -91,7 +98,7 @@ function displaycompleted(tasks) {
             </section>`;
             completed.innerHTML += newtask;
   });
-
+}
 }
 
 
